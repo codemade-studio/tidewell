@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --color-navy: #0b1f3a;
+  --color-navy-soft: #16305a;
+  --color-tide: #2457e6;
+  --color-tide-dark: #1a42b8;
+  --color-sky: #eaf1ff;
+  --color-mist: #f6f8fc;
+  --color-line: #e2e8f3;
+  --color-slate: #5a6782;
+  --color-slate-ink: #243250;
+  --color-coral: #f26b4f;
+  --color-coral-dark: #c94a31;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+
+body {
+  @apply bg-white font-sans text-slate-ink antialiased;
+}
+
+.typing-dot { animation: typing 1s infinite ease-in-out; }
+@keyframes typing {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.5; }
+  30% { transform: translateY(-4px); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
